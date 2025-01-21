@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background for a sleek look */
+    color: white; /* White text for contrast */
+}
+
+/* Top List {Home, Resume, Projects, Splash Bros, About Me} */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Dark gray navigation bar */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 20px; /* Spacing between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Top List Text (links) {color, display} */
+nav ul li a {
+    color: rgb(255, 255, 255); /* White text for navigation links */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Over Top List */
+nav ul li a:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: left;
+    margin: 15px 0;
+}
+
+p {
+    text-align: left;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%; /* Makes the image responsive to the container width */
+    max-width: 800px; /* Sets the maximum width */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 20px auto;
+}
+
+.recipeImage {
+    width: 350px; /* Fixed width */
+    height: 700px; /* Fixed height */
+    object-fit: cover; /* Ensures the image scales properly */
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 10px auto; /* Center and add margin */
+}
+
+/* Container */
+.container {
+    width: 95%; /* Adjust to fit the desired content area */
+    max-width: 800px; /* Limit maximum width */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px; /* Add space inside the container */
+    background-color: black; /* Black background */ /*#222 (original color)*/
+    color: white; /* Text color */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    text-align: center; /* Center text inside the container */
+}
+
+.button {
+    background-color: #444; /* Button background */
+    color: white; /* Text color */
+    margin: 20px;
+    padding: 10px 20px; /* Space around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable buttons */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.button:hover {
+    background-color: #666; /* Slightly lighter on hover */
+}
+
+.button2 {
+    background-color: black; /* Button background */
+    color: rgb(168, 0, 146); /* Text color */
+    margin: 0px;
+    padding: 10px 0px; /* Space around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable buttons */
+    float: left;
+}
+
+/* Download Button */
+.download-button {
+    background-color: rgb(45, 255, 255); /* Blue background for the download button */
+    color: rgb(0, 0, 0); /* White text */
+    padding: 10px 20px; /* Add space inside the button */
+    margin: 20px; /* Space around the button */
+    text-decoration: none; /* Remove underline for links */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable buttons */
+    display: inline-block; /* Ensures it behaves like a button */
+    text-align: center; /* Center text inside */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.download-button:hover {
+    background-color: #005f73; /* Darker blue on hover */
+}
+
+.mini-download-button {
+    background-color: rgb(45, 255, 255); /* Blue background for the download button */
+    color: rgb(0, 0, 0); /* White text */
+    padding: 7px 15px; /* Add space inside the button */
+    margin: 12px; /* Space around the button */
+    text-decoration: none; /* Remove underline for links */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable buttons */
+    display: inline-block; /* Ensures it behaves like a button */
+    text-align: center; /* Center text inside */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        width: 95%; /* Expand to take more space on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

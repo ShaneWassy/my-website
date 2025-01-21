@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background for a sleek look */
+    color: white; /* White text for contrast */
+}
+
+/* Top List {Home, Resume, Projects, Splash Bros, About Me} */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Dark gray navigation bar */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 20px; /* Spacing between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Top List Text (links) {color, display} */
+nav ul li a {
+    color: rgb(255, 255, 255); /* White text for navigation links */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Over Top List */
+nav ul li a:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    text-align: left;
+    margin: 10px 0;
+}
+
+/* Container for Flexbox Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #555; /* Adjusted for better contrast on black background */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222; /* Darker project background */
+    color: white;
+}
+
+.project-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.project-info h2 {
+    margin: 0 0 10px;
+}
+
+.project-info p {
+    margin: 0 0 15px;
+}
+
+.project-info .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+.project-info .button:hover {
+    background-color: #0056b3;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack project info and image vertically */
+        align-items: flex-start;
+    }
+
+    .project-info {
+        padding-right: 0;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

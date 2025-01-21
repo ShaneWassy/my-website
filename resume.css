@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background for a sleek look */
+    color: white; /* White text for contrast */
+}
+
+/* Top List {Home, Resume, Projects, Splash Bros, About Me} */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Dark gray navigation bar */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 20px; /* Spacing between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Top List Text (links) {color, display} */
+nav ul li a {
+    color: rgb(255, 255, 255); /* White text for navigation links */
+    text-decoration: none;
+    padding: 0px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Over Top List */
+nav ul li a:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+ul {
+    list-style-position: inside; /* Positions the bullet points inside the content box */
+    padding-left: 20px; /* Adjust padding as needed */
+}
+
+/* Page Layout */
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Center the container on the page */
+    padding: 20px;
+    color: white;
+}
+
+/* Resume Container */
+.resume-container {
+    text-align: center; /* Centers inline and inline-block elements inside */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 100px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5em; /* Larger font size for name */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em; /* Slightly smaller for section headers */
+    margin-top: 30px;
+    border-bottom: 1px solid #555; /* Underline for section headers */
+    padding-bottom: 5px;
+}
+
+p, li {
+    font-size: 1em;
+    line-height: 1.6; /* Improve readability with line height */
+    margin: 10px 0;
+}
+
+/* Contact Information */
+.contact {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact a {
+    color: #007BFF; /* Blue link color */
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align skill items */
+    gap: 10px; /* Spacing between skills */
+    margin: 20px 0;
+}
+
+.skills span {
+    background-color: #222; /* Dark gray background for skill items */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em; /* Compact font size for skill items */
+    text-align: center;
+}
+
+
+/* Image */
+.profile-image {
+    height: 50px !important; /* Adjust size as needed */
+    width: 50px !important;
+    border-radius: 50% !important; /* Optional */
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .skills span {
+        padding: 6px 10px; /* Compact padding for skill items */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p, li {
+        font-size: 0.9em;
+    }
+
+    .skills span {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background for a sleek look */
+    color: white; /* White text for contrast */
+}
+
+/* Top List {Home, Resume, Projects, Splash Bros, About Me} */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Dark gray navigation bar */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 20px; /* Spacing between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Top List Text (links) {color, display} */
+nav ul li a {
+    color: rgb(255, 255, 255); /* White text for navigation links */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Over Top List */
+nav ul li a:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+/* Text */
+h1 {
+    text-align: left;
+    background-color: rgba(255, 255, 0, 0.499); /* Highlight color */
+    margin: 20px 0;
+    padding: 0px 0px; /* Space around the text */
+    display: inline-block; /* Ensures the highlight only spans the text */
+}
+
+h2 {
+    text-align: left;
+    margin: 20px 0;
+}
+
+p {
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* Flex Container for Left and Right Boxes */
+.flex-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Spaces out the left and right containers */
+    align-items: stretch; /* Ensures all containers stretch to the same height */
+    gap: 20px; /* Adds space between the two containers */
+    width: 95%; /* Restricts the total width of the layout */
+    margin: 20px auto; /* Centers the flex container horizontally */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Subtle background to differentiate container */
+}
+
+/* Left Container with Improved Grid Layout */
+.left-container {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: 2fr 1fr; /* Divides the container into two equal columns */
+    grid-template-rows: auto auto 50px; /* Adjusts rows for details, pricing, and button */
+    background-color: rgba(42, 45, 49, 0.2); /* Light gray background */
+    padding: 20px;
+    flex: 1;
+    max-width: 50%; /* Restricts width */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    gap: 10px; /* Adds spacing between grid items */
+    min-height: 400px; /* Ensures visibility */
+    box-sizing: border-box; /* Includes padding in height */
+}
+
+/* Details Section */
+.left-container .details {
+    grid-column: 1 / 2; /* Occupies the first column */
+    grid-row: 1 / 2; /* Stays in the first row */
+    align-self: start; /* Aligns content to the top */
+    padding-right: 20px; /* Adds spacing from the pricing section */
+}
+
+/* Pricing Section */
+.left-container .pricing {
+    grid-column: 2 / 3; /* Occupies the second column */
+    grid-row: 1 / 2; /* Stays in the first row */
+    align-self: start; /* Aligns content to the top */
+    text-align: right; /* Aligns text to the right */
+    padding-left: 20px; /* Adds spacing from the details section */
+}
+
+/* Button Section */
+.left-container .book-wash {
+    grid-column: 2 / 3; /* Aligns the button to the second column */
+    grid-row: 3 / 4; /* Places the button in the bottom row */
+    justify-self: end; /* Aligns the button to the right */
+    align-self: center; /* Centers vertically in its row */
+    background-color: #ff4500; /* Bright orange button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.left-container .book-wash:hover {
+    background-color: #ff6347; /* Lighter orange on hover */
+}
+
+/* Right Container */
+.right-container {
+    background-color: rgba(42, 45, 49, 0.2); /* Light gray background */
+    padding: 20px;
+    flex: 1; /* Allows it to take equal space */
+    max-width: 50%; /* Ensures it doesn't grow too wide */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    min-height: 300px; /* Ensure container height is visible */
+    box-sizing: border-box; /* Includes padding in height */
+}
+
+/* Image Grid Styling */
+.image-grid {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 10px; /* Space between rows and columns */
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers the grid vertically */
+    height: 100%; /* Ensures grid fills the container */
+}
+
+/* Individual Images in the Grid */
+.image-grid img {
+    width: 100%; /* Images fill their grid cells fully */
+    height: 100%; /* Stretch images to fill the height of the grid cells */
+    object-fit: cover; /* Ensures images fill the cell without distortion */
+    border-radius: 5px; /* Adds rounded corners to images */
+    display: block; /* Ensures proper block rendering */
+}
+
+/* Image */
+.img {
+    margin-top: 20px; /* Adds space at the top */
+    width: 100%; /* Scales the image to fit the container */
+    max-width: 1200px; /* Sets a maximum width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Centers the image horizontally */
+    margin-left: auto; /* Explicitly center horizontally */
+    margin-right: auto; /* Explicitly center horizontally */
+}
+
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stacks the containers vertically */
+        gap: 15px;
+    }
+
+    .left-container, .right-container {
+        max-width: 100%; /* Containers span the full width on small screens */
+        height: auto; /* Let height adjust for content */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
