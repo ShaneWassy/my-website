@@ -64,10 +64,36 @@ img {
     margin: 10px auto; /* Center and add margin */
 }
 
-/* Container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 10px; /* Space between images */
+    max-width: 1000px; /* Adjust width */
+    margin: 20px auto; /* Center the grid */
+}
+
+.image-grid img {
+    width: 100%; /* Make images fit the grid cells */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Containers */
 .container {
     width: 95%; /* Adjust to fit the desired content area */
     max-width: 800px; /* Limit maximum width */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px; /* Add space inside the container */
+    background-color: black; /* Black background */ /*#222 (original color)*/
+    color: white; /* Text color */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    text-align: center; /* Center text inside the container */
+}
+
+.car-container {
+    width: 99%; /* Adjust to fit the desired content area */
+    max-width: 1200px; /* Limit maximum width */
     margin: 20px auto; /* Center the container horizontally */
     padding: 20px; /* Add space inside the container */
     background-color: black; /* Black background */ /*#222 (original color)*/
@@ -87,7 +113,6 @@ img {
     cursor: pointer; /* Pointer cursor for clickable buttons */
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
-
 .button:hover {
     background-color: #666; /* Slightly lighter on hover */
 }
@@ -101,6 +126,21 @@ img {
     border-radius: 5px; /* Optional: Rounded corners */
     cursor: pointer; /* Pointer cursor for clickable buttons */
     float: left;
+}
+
+.button3 {
+    background-color: black;
+    color: rgb(225, 0, 195);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Ensures the link stays inline */
+    margin-left: 5px; /* Adds spacing between the text and link */
+    text-decoration: none; /* Removes underline */
+}
+.button3:hover {
+    color: rgb(255, 0, 221); /* Slightly lighter on hover */
 }
 
 /* Download Button */
